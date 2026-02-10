@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💌 С Днём Святого Валентина!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>"
+    />
+  </head>
+  <body>
+    <!-- Падающие сердечки (генерируются в JS) -->
+    <div id="hearts-container"></div>
+
+    <main class="main">
+      <!-- Котики по бокам -->
+      <div class="cats-wrapper">
+        <div class="cat cat-left">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Тело -->
+            <ellipse cx="100" cy="140" rx="55" ry="50" fill="#111" />
+            <!-- Голова -->
+            <circle cx="100" cy="80" r="40" fill="#111" />
+            <!-- Ушки -->
+            <polygon points="65,55 75,20 90,50" fill="#111" />
+            <polygon points="135,55 125,20 110,50" fill="#111" />
+            <polygon points="70,50 78,28 88,48" fill="#222" />
+            <polygon points="130,50 122,28 112,48" fill="#222" />
+            <!-- Глазки (жёлто-зелёные, серьёзные — слегка прищурены) -->
+            <ellipse cx="85" cy="76" rx="9" ry="7" fill="#b8cc30" />
+            <ellipse cx="115" cy="76" rx="9" ry="7" fill="#b8cc30" />
+            <ellipse cx="86" cy="76" rx="5" ry="5" fill="#111" />
+            <ellipse cx="116" cy="76" rx="5" ry="5" fill="#111" />
+            <ellipse cx="87" cy="74" rx="1.5" ry="1.5" fill="#d4e840" />
+            <ellipse cx="117" cy="74" rx="1.5" ry="1.5" fill="#d4e840" />
+            <!-- Серьёзные бровки -->
+            <line
+              x1="76"
+              y1="64"
+              x2="92"
+              y2="67"
+              stroke="#222"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="124"
+              y1="64"
+              x2="108"
+              y2="67"
+              stroke="#222"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            />
+            <!-- Носик -->
+            <ellipse cx="100" cy="88" rx="4" ry="3" fill="#222" />
+            <!-- Серьёзный ротик (прямая линия) -->
+            <line
+              x1="94"
+              y1="94"
+              x2="106"
+              y2="94"
+              stroke="#222"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <!-- Усики (тёмные, еле видны) -->
+            <line
+              x1="58"
+              y1="84"
+              x2="82"
+              y2="87"
+              stroke="#333"
+              stroke-width="1"
+              stroke-linecap="round"
+            />
+            <line
+              x1="56"
+              y1="91"
+              x2="82"
+              y2="91"
+              stroke="#333"
+              stroke-width="1"
+              stroke-linecap="round"
+            />
+            <line
+              x1="118"
+              y1="87"
+              x2="142"
+              y2="84"
+              stroke="#333"
+              stroke-width="1"
+              stroke-linecap="round"
+            />
+            <line
+              x1="118"
+              y1="91"
+              x2="144"
+              y2="91"
+              stroke="#333"
+              stroke-width="1"
+              stroke-linecap="round"
+            />
+            <!-- Лапки -->
+            <ellipse cx="75" cy="175" rx="15" ry="10" fill="#111" />
+            <ellipse cx="125" cy="175" rx="15" ry="10" fill="#111" />
+            <!-- Хвостик -->
+            <path
+              d="M 45 150 Q 20 120 30 100"
+              fill="none"
+              stroke="#111"
+              stroke-width="10"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
+        <!-- Сердечко между котиками -->
+        <div class="shared-heart">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M50 88 C25 65 0 50 0 30 C0 12 12 0 28 0 C38 0 46 6 50 14 C54 6 62 0 72 0 C88 0 100 12 100 30 C100 50 75 65 50 88Z"
+              fill="#ff4d6d"
+            />
+          </svg>
+        </div>
+
+        <div class="cat cat-right">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Тело (чёрное) -->
+            <ellipse cx="100" cy="140" rx="55" ry="50" fill="#1a1a1a" />
+            <!-- Белая грудка -->
+            <ellipse cx="100" cy="155" rx="28" ry="32" fill="#f5f5f5" />
+            <!-- Голова (тёмная морда) -->
+            <circle cx="100" cy="80" r="40" fill="#1a1a1a" />
+            <!-- Ушки -->
+            <polygon points="65,55 75,20 90,50" fill="#1a1a1a" />
+            <polygon points="135,55 125,20 110,50" fill="#1a1a1a" />
+            <polygon points="70,50 78,28 88,48" fill="#2a2a2a" />
+            <polygon points="130,50 122,28 112,48" fill="#2a2a2a" />
+            <!-- Глазки (большие, весёлые) -->
+            <ellipse cx="85" cy="75" rx="9" ry="10" fill="#f0c040" />
+            <ellipse cx="115" cy="75" rx="9" ry="10" fill="#f0c040" />
+            <ellipse cx="87" cy="76" rx="5" ry="6" fill="#111" />
+            <ellipse cx="117" cy="76" rx="5" ry="6" fill="#111" />
+            <ellipse cx="88" cy="74" rx="2" ry="2" fill="#ffe060" />
+            <ellipse cx="118" cy="74" rx="2" ry="2" fill="#ffe060" />
+            <!-- Носик -->
+            <ellipse cx="100" cy="88" rx="4" ry="3" fill="#ffb6c1" />
+            <!-- Весёлый ротик (улыбка) -->
+            <path
+              d="M 91 92 Q 100 100 109 92"
+              fill="none"
+              stroke="#555"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <!-- Белые усики (яркие, заметные) -->
+            <line
+              x1="55"
+              y1="82"
+              x2="82"
+              y2="87"
+              stroke="#f5f5f5"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="53"
+              y1="90"
+              x2="82"
+              y2="91"
+              stroke="#f5f5f5"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="57"
+              y1="97"
+              x2="83"
+              y2="94"
+              stroke="#f5f5f5"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="118"
+              y1="87"
+              x2="145"
+              y2="82"
+              stroke="#f5f5f5"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="118"
+              y1="91"
+              x2="147"
+              y2="90"
+              stroke="#f5f5f5"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="117"
+              y1="94"
+              x2="143"
+              y2="97"
+              stroke="#f5f5f5"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <!-- Лапки чёрные с белыми кончиками -->
+            <ellipse cx="75" cy="175" rx="15" ry="10" fill="#1a1a1a" />
+            <ellipse cx="125" cy="175" rx="15" ry="10" fill="#1a1a1a" />
+            <ellipse cx="75" cy="179" rx="10" ry="5" fill="#f5f5f5" />
+            <ellipse cx="125" cy="179" rx="10" ry="5" fill="#f5f5f5" />
+            <!-- Хвостик (полностью чёрный) -->
+            <path
+              d="M 155 150 Q 180 120 170 100"
+              fill="none"
+              stroke="#1a1a1a"
+              stroke-width="10"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Конверт с открыткой -->
+      <div class="envelope-wrapper" id="envelope-wrapper">
+        <div class="envelope" id="envelope">
+          <!-- Клапан конверта -->
+          <div class="envelope-flap" id="envelope-flap"></div>
+          <!-- Тело конверта -->
+          <div class="envelope-body">
+            <div class="envelope-front">
+              <span class="envelope-label">Моей любимой 💕</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Открытка (скрыта до нажатия) -->
+        <div class="card" id="card">
+          <div class="card-header">
+            <span>💌</span> С Днём Святого Валентина! <span>💌</span>
+          </div>
+          <div class="card-text" id="card-text">
+            <!-- Текст появится через typewriter -->
+          </div>
+          <div class="card-footer">
+            <span class="card-hearts">❤️ 🐱 ❤️</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Кнопка -->
+      <button class="open-btn" id="open-btn">
+        <span>Открыть открытку</span> 💌
+      </button>
+
+      <!-- Счётчик дней (опционально — заполни дату) -->
+      <div class="counter" id="counter"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
